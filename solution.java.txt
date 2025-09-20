@@ -11,9 +11,7 @@ function baseToBigInt(value, base) {
 
   for (const digit of digits) {
     const val = digitMap[digit];
-    if (val === undefined || val >= base) {
-      throw new Error(`Invalid digit "${digit}" for base ${base}`);
-    }
+    
     result = result * bigBase + BigInt(val);
   }
 
